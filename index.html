@@ -132,24 +132,66 @@
       </article>
     </section>
         
-      Stay Informed. Stay Empowered.
-        Receive text messages with the news you want to know.
+    <section id="alerts">
+      <h2>Stay Informed. Stay Empowered.</h2>
+      <p>Receive text messages with the news you want to know.</p>
+
+      <form action="post and method="https://wp.zybooks.com/form-viewer.php">
+        <div class="form-field">
+          <label for="subscriber-name">Name</label>
+          <input type="text" id="subscriber-name" name="subscriber-name" required>
+        </div>
         
-        Name
+        <div class="form-field">
+          <label for="subscriber-mobile">Mobile</label>
+          <input type="tel" id="subscriber-mobile" name="subscriber-mobile" inputmode="tel" required>
+        </div>
         
-        Mobile
+        <fieldset class="form-field">
+          <legend>Notification Preferences</legend>
+          
+          <div class="checkbox-group">
+            <input type="checkbox" id="pref-breaking" name="preferences" value="Breaking News">
+            <label for="pref-breaking">Breaking News</label>
+          </div>
+          
+          <div class="checkbox-group">
+            <input type="checkbox" id="pref-politics" name="preferences" value="Politics">
+            <label for="pref-politics">Politics</label>
+          </div>
+          
+          <div class="checkbox-group">
+            <input type="checkbox" id="pref-weather" name="preferences" value="Weather">
+            <label for="pref-weather">Weather</label>
+          </div>
+          
+          <div class="checkbox-group">
+            <input type="checkbox" id="pref-sports" name="preferences" value="Sports">
+            <label for="pref-sports">Sports</label>
+          </div>
+          
+          <div class="checkbox-group">
+            <input type="checkbox" id="pref-entertainment" name="preferences" value="Entertainment">
+            <label for="pref-entertainment">Entertainment</label>
+          </div>
+          
+          <div class="checkbox-group">
+            <input type="checkbox" id="pref-world" name="preferences" value="World">
+            <label for="pref-world">World</label>
+          </div>
+          
+          <div class="checkbox-group">
+            <input type="checkbox" id="pref-financial" name="preferences" value="Financial">
+            <label for="pref-financial">Financial</label>
+          </div>
+        </fieldset>
+      
+        <button type="submit" class="button-primary">Subscribe</button>
+      </form>
+    </section>
+  </main>
         
-        Notification Preferences
-        
-        Breaking News
-        Politics
-        Weather
-        Sports
-        Entertainment
-        World
-        Financial
-        
-        Subscribe
+       
       
       Follow Us
         Twitter/X
