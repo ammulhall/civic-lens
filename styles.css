@@ -235,8 +235,51 @@ footer {
   cursor: pointer;
 }
 /* ///ADD/// Global Text Styles */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
 
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.3rem;
+}
 
+.tagline {
+  font-size: 0.95rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.85rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+blockquote.tagline {
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+label, legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input[type="text"], input[type="tel"] {
+  width: 100%;
+  padding: 0.55rem;
+  border-radius: 0.2rem;
+  border: 1px solid #ccc;
+  font-family: var(--font-body);
+}
 /* ///ADD/// medium styles 620px */
 
 
