@@ -73,7 +73,7 @@ body.light-mode {
   color: var(--truth-text);
 }
 body.light-mode main {
-  background-color: #f5f5f5;
+  background-color: var(--watchdog-white);
   color: var(--truth-text);
 }
 body.dark-mode {
@@ -81,7 +81,7 @@ body.dark-mode {
   color: var(--watchdog-white);
 }
 body.dark-mode main {
-  background-color: #2c2c2c;
+  background-color: var(--truth-text);
   color: var(--watchdog-white);
 }
 
@@ -104,9 +104,16 @@ body.dark-mode main {
   color: #fff;
   padding: 0.5rem 1rem;
   z-index: 1000;
+  border: 2px solid transparent;
 }
 .skip-link:focus {
   left: 0.5rem;
+}
+
+.skip-link:hover {
+  background-color: transparent;         
+  color: var(--news-flash);             
+  border: 2px solid var(--news-flash); 
 }
 
 /* ///ADD/// Navigation Styles */
@@ -203,6 +210,18 @@ footer {
   margin-bottom: 1.5rem;
 }
 
+#breaking-news article,
+#featured-articles article {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+#breaking-news article:hover,
+#featured-articles article:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+}
+
 body.light-mode #breaking-news article {
   background-color: #ffffff;
   color: var(--truth-text);
@@ -214,6 +233,7 @@ body.light-mode #breaking-news article {
   width: 100%;
   height: auto;
   display: block;
+  cursor: pointer;
 }
 
 #featured-articles article {
@@ -239,6 +259,11 @@ body.light-mode #featured-articles article {
   margin-bottom: 0.75rem;
 }
 
+#alerts fieldset.form-field {
+  width: 100%;
+  grid-column: 1 / -1 !important;
+}
+
 fieldset.form-field {
   border: 1px solid var(--blue-bulletin);
   padding: 1rem;
@@ -255,6 +280,12 @@ fieldset.form-field {
   width: 100%;
 }
 
+.checkbox-group,
+.checkbox-group label,
+.checkbox-group input[type="checkbox"] {
+  cursor: pointer;
+}
+
 .button-primary {
   margin-top: 0.75rem;
   width: 100%;
@@ -266,6 +297,12 @@ fieldset.form-field {
   font-weight: 600;
   cursor: pointer;
 }
+
+.button-primary:hover {
+  background-color: #ffffff;
+  color: var(--blue-bulletin);
+}
+
 /* ///ADD/// Global Text Styles */
 h1, h2, h3 {
   font-family: var(--font-heading);
@@ -462,4 +499,9 @@ fieldset.form-field > legend {
     outline: 2px solid var(--news-flash);
   }
 
+  @media screen and (max-width: 619px) {
+    body:has(.menu-button:hover) .skip-link {
+      left: 0.5rem;
+    }
+  }
 }
